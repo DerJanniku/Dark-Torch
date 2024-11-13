@@ -1,0 +1,15 @@
+c:\Users\Jannik\vscodeProjects\DarkTorch\src\DarkTorch\bin\Debug\net5.0-windows\DarkTorch.exe
+c:\Users\Jannik\vscodeProjects\DarkTorch\src\DarkTorch\bin\Debug\net5.0-windows\DarkTorch.deps.json
+c:\Users\Jannik\vscodeProjects\DarkTorch\src\DarkTorch\bin\Debug\net5.0-windows\DarkTorch.runtimeconfig.json
+c:\Users\Jannik\vscodeProjects\DarkTorch\src\DarkTorch\bin\Debug\net5.0-windows\DarkTorch.runtimeconfig.dev.json
+c:\Users\Jannik\vscodeProjects\DarkTorch\src\DarkTorch\bin\Debug\net5.0-windows\DarkTorch.dll
+c:\Users\Jannik\vscodeProjects\DarkTorch\src\DarkTorch\bin\Debug\net5.0-windows\DarkTorch.pdb
+c:\Users\Jannik\vscodeProjects\DarkTorch\src\DarkTorch\obj\Debug\net5.0-windows\DarkTorch.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Jannik\vscodeProjects\DarkTorch\src\DarkTorch\obj\Debug\net5.0-windows\DarkTorch.AssemblyInfoInputs.cache
+c:\Users\Jannik\vscodeProjects\DarkTorch\src\DarkTorch\obj\Debug\net5.0-windows\DarkTorch.AssemblyInfo.cs
+c:\Users\Jannik\vscodeProjects\DarkTorch\src\DarkTorch\obj\Debug\net5.0-windows\DarkTorch.csproj.CoreCompileInputs.cache
+c:\Users\Jannik\vscodeProjects\DarkTorch\src\DarkTorch\obj\Debug\net5.0-windows\DarkTorch.dll
+c:\Users\Jannik\vscodeProjects\DarkTorch\src\DarkTorch\obj\Debug\net5.0-windows\refint\DarkTorch.dll
+c:\Users\Jannik\vscodeProjects\DarkTorch\src\DarkTorch\obj\Debug\net5.0-windows\DarkTorch.pdb
+c:\Users\Jannik\vscodeProjects\DarkTorch\src\DarkTorch\obj\Debug\net5.0-windows\DarkTorch.genruntimeconfig.cache
+c:\Users\Jannik\vscodeProjects\DarkTorch\src\DarkTorch\obj\Debug\net5.0-windows\ref\DarkTorch.dll
