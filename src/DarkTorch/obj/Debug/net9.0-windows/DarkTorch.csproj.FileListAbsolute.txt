@@ -1,0 +1,15 @@
+C:\Users\jannik\Downloads\was\Dark-Torch\src\DarkTorch\obj\Debug\net9.0-windows\DarkTorch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jannik\Downloads\was\Dark-Torch\src\DarkTorch\obj\Debug\net9.0-windows\DarkTorch.AssemblyInfoInputs.cache
+C:\Users\jannik\Downloads\was\Dark-Torch\src\DarkTorch\obj\Debug\net9.0-windows\DarkTorch.AssemblyInfo.cs
+C:\Users\jannik\Downloads\was\Dark-Torch\src\DarkTorch\obj\Debug\net9.0-windows\DarkTorch.csproj.CoreCompileInputs.cache
+C:\Users\jannik\Downloads\was\Dark-Torch\src\DarkTorch\obj\Debug\net9.0-windows\DarkTorch.sourcelink.json
+C:\Users\jannik\Downloads\was\Dark-Torch\src\DarkTorch\bin\Debug\net9.0-windows\DarkTorch.exe
+C:\Users\jannik\Downloads\was\Dark-Torch\src\DarkTorch\bin\Debug\net9.0-windows\DarkTorch.deps.json
+C:\Users\jannik\Downloads\was\Dark-Torch\src\DarkTorch\bin\Debug\net9.0-windows\DarkTorch.runtimeconfig.json
+C:\Users\jannik\Downloads\was\Dark-Torch\src\DarkTorch\bin\Debug\net9.0-windows\DarkTorch.dll
+C:\Users\jannik\Downloads\was\Dark-Torch\src\DarkTorch\bin\Debug\net9.0-windows\DarkTorch.pdb
+C:\Users\jannik\Downloads\was\Dark-Torch\src\DarkTorch\obj\Debug\net9.0-windows\DarkTorch.dll
+C:\Users\jannik\Downloads\was\Dark-Torch\src\DarkTorch\obj\Debug\net9.0-windows\refint\DarkTorch.dll
+C:\Users\jannik\Downloads\was\Dark-Torch\src\DarkTorch\obj\Debug\net9.0-windows\DarkTorch.pdb
+C:\Users\jannik\Downloads\was\Dark-Torch\src\DarkTorch\obj\Debug\net9.0-windows\DarkTorch.genruntimeconfig.cache
+C:\Users\jannik\Downloads\was\Dark-Torch\src\DarkTorch\obj\Debug\net9.0-windows\ref\DarkTorch.dll

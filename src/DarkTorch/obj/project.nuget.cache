@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "24pN58II8p0=",
+  "dgSpecHash": "HCUy0TGk3xg=",
   "success": true,
-  "projectFilePath": "c:\\Users\\Jannik\\vscodeProjects\\DarkTorch\\src\\DarkTorch\\DarkTorch.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Jannik\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\Jannik\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\Jannik\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\Jannik\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\jannik\\Downloads\\was\\Dark-Torch\\src\\DarkTorch\\DarkTorch.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

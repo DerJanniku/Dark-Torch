@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -44,7 +43,9 @@ namespace DarkTorch.Core
                     if (file != otherFile)
                     {
                         string fileName = Path.GetFileNameWithoutExtension(otherFile.Name);
-                        if (Regex.IsMatch(content, $@"{Regex.Escape(fileName)}"))
+                        // Enhanced regex patterns to match method calls and class references
+                        if (Regex.IsMatch(content, $@"\b{Regex.Escape(fileName)}\b") || 
+                            Regex.IsMatch(content, $@"\b{Regex.Escape(fileName)}\s*\(")) // Match method calls
                         {
                             connections[file.FullName].Add(otherFile.FullName);
                         }

@@ -1,18 +1,39 @@
-
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Runtime.Serialization;
+using System.ComponentModel;
 
 namespace DarkTorch.UI
 {
+    [DataContract]
     public class FileVisualizer : Panel
     {
         private Dictionary<string, List<string>> fileConnections;
         private Dictionary<string, Rectangle> fileRectangles;
 
         public event EventHandler<string> FileSelected;
-        public string SelectedFile { get; private set; }
+
+        [DataMember]
+        private string _selectedFile = string.Empty; // Initialize the backing field
+        [DataMember(Name = "SelectedFile")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public string SelectedFile
+        {
+            get => _selectedFile;
+            set
+            {
+                _selectedFile = value;
+                // Additional logic can be added here if needed
+            }
+        }
+
+        [OnDeserialized]
+        private void OnDeserialized(StreamingContext context)
+        {
+            SelectedFile = _selectedFile;
+        }
 
         public FileVisualizer()
         {
@@ -79,6 +100,8 @@ namespace DarkTorch.UI
 
         private void FileVisualizer_MouseClick(object sender, MouseEventArgs e)
         {
+            if (fileRectangles == null) return; // Ensure fileRectangles is populated
+
             foreach (var file in fileRectangles.Keys)
             {
                 if (fileRectangles[file].Contains(e.Location))

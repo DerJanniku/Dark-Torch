@@ -1,4 +1,3 @@
-
 using System;
 using System.Windows.Forms;
 using System.Drawing;
@@ -12,7 +11,6 @@ namespace DarkTorch.Forms
 {
     public class MainForm : Form
     {
-        private Button selectFolderButton;
         private FileVisualizer fileVisualizer;
         private ProjectAnalyzer projectAnalyzer;
         private FileManager fileManager;
@@ -21,12 +19,22 @@ namespace DarkTorch.Forms
         private TextBox noteTextBox;
         private Button saveNoteButton;
         private Button openInEditorButton;
+        private Button selectFolderButton;
 
         public MainForm()
         {
             InitializeComponent();
             projectAnalyzer = new ProjectAnalyzer();
             fileManager = new FileManager();
+            this.KeyDown += MainForm_KeyDown; // Add key down event handler
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.K) // Check for Ctrl + K
+            {
+                SelectFolderButton_Click(sender, e); // Trigger folder selection
+            }
         }
 
         private void InitializeComponent()
@@ -34,13 +42,14 @@ namespace DarkTorch.Forms
             this.Text = "DarkTorch";
             this.Size = new System.Drawing.Size(1000, 600);
 
+            // Initialize the Select Folder Button
             selectFolderButton = new Button
             {
                 Text = "Select Project Folder",
-                Location = new Point(10, 10),
-                Size = new Size(150, 30)
+                Location = new Point(10, 10), // Adjust the location as needed
+                Size = new Size(150, 30) // Adjust the size as needed
             };
-            selectFolderButton.Click += SelectFolderButton_Click;
+            selectFolderButton.Click += SelectFolderButton_Click; // Attach the click event handler
 
             splitContainer = new SplitContainer
             {
@@ -117,9 +126,13 @@ namespace DarkTorch.Forms
 
         private void SaveNoteButton_Click(object sender, EventArgs e)
         {
-            if (fileVisualizer.SelectedFile != null)
+            if (!string.IsNullOrEmpty(fileVisualizer.SelectedFile)) // Check if SelectedFile is not null or empty
             {
                 fileManager.SaveNote(fileVisualizer.SelectedFile, noteTextBox.Text);
+            }
+            else
+            {
+                MessageBox.Show("Please select a file before saving a note.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

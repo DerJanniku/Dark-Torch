@@ -1,4 +1,3 @@
-
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -7,7 +6,6 @@ namespace DarkTorch.Core
 {
     public class FileManager
     {
-        private string currentFilePath;
         private Dictionary<string, string> fileNotes;
 
         public FileManager()

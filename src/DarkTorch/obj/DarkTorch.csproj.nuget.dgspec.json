@@ -1,30 +1,34 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Jannik\\vscodeProjects\\DarkTorch\\src\\DarkTorch\\DarkTorch.csproj": {}
+    "C:\\Users\\jannik\\Downloads\\was\\Dark-Torch\\src\\DarkTorch\\DarkTorch.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Jannik\\vscodeProjects\\DarkTorch\\src\\DarkTorch\\DarkTorch.csproj": {
+    "C:\\Users\\jannik\\Downloads\\was\\Dark-Torch\\src\\DarkTorch\\DarkTorch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Jannik\\vscodeProjects\\DarkTorch\\src\\DarkTorch\\DarkTorch.csproj",
+        "projectUniqueName": "C:\\Users\\jannik\\Downloads\\was\\Dark-Torch\\src\\DarkTorch\\DarkTorch.csproj",
         "projectName": "DarkTorch",
-        "projectPath": "c:\\Users\\Jannik\\vscodeProjects\\DarkTorch\\src\\DarkTorch\\DarkTorch.csproj",
-        "packagesPath": "C:\\Users\\Jannik\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Jannik\\vscodeProjects\\DarkTorch\\src\\DarkTorch\\obj\\",
+        "projectPath": "C:\\Users\\jannik\\Downloads\\was\\Dark-Torch\\src\\DarkTorch\\DarkTorch.csproj",
+        "packagesPath": "C:\\Users\\jannik\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jannik\\Downloads\\was\\Dark-Torch\\src\\DarkTorch\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Jannik\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\jannik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0-windows"
+          "net9.0-windows"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0-windows7.0": {
-            "targetAlias": "net5.0-windows",
+          "net9.0-windows7.0": {
+            "targetAlias": "net9.0-windows",
             "projectReferences": {}
           }
         },
@@ -36,13 +40,13 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
-        "net5.0-windows7.0": {
-          "targetAlias": "net5.0-windows",
+        "net9.0-windows7.0": {
+          "targetAlias": "net9.0-windows",
           "imports": [
             "net461",
             "net462",
@@ -54,33 +58,15 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.17, 5.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             },
-            "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "Microsoft.WindowsDesktop.App": {
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
