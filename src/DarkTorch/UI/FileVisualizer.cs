@@ -81,34 +81,85 @@ namespace DarkTorch.UI
             }
         }
 
-        protected override void OnPaint(PaintEventArgs e)
+protected override void OnPaint(PaintEventArgs e)
+{
+    base.OnPaint(e);
+    if (fileConnections == null) return;
+
+    using (Pen pen = new Pen(Color.Black))
+    using (Font font = new Font(FontFamily.GenericSansSerif, 8))
+    {
+        int centerX = this.Width / 2;
+        int centerY = this.Height / 2;
+        int radius = 100; // Adjust radius as needed
+        int index = 0;
+
+        foreach (var file in fileConnections.Keys)
         {
-            base.OnPaint(e);
-            if (fileConnections == null) return;
+            // Calculate position based on a spider web layout
+            double angle = (2 * Math.PI / fileConnections.Count) * index; // Calculate angle based on file index
+            int x = centerX + (int)(radius * Math.Cos(angle));
+            int y = centerY + (int)(radius * Math.Sin(angle));
 
-            using (Pen pen = new Pen(Color.Black))
-            using (Font font = new Font(FontFamily.GenericSansSerif, 8))
-            using (StringFormat sf = new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center })
+            Rectangle rect = new Rectangle(x, y, 100, 30); // Adjust size as needed
+            e.Graphics.DrawRectangle(pen, rect);
+            e.Graphics.DrawString(System.IO.Path.GetFileName(file), font, Brushes.Black, rect);
+
+            // Draw connections
+            foreach (var connectedFile in fileConnections[file])
             {
-                foreach (var file in fileRectangles.Keys)
+                if (fileRectangles.ContainsKey(connectedFile))
                 {
-                    e.Graphics.DrawRectangle(pen, fileRectangles[file]);
-                    e.Graphics.DrawString(System.IO.Path.GetFileName(file), font, Brushes.Black, fileRectangles[file], sf);
-
-                    if (fileConnections.ContainsKey(file))
-                    {
-                        foreach (var connectedFile in fileConnections[file])
-                        {
-                            if (fileRectangles.ContainsKey(connectedFile))
-                            {
-                                Point start = new Point(fileRectangles[file].Right, fileRectangles[file].Top + fileRectangles[file].Height / 2);
-                                Point end = new Point(fileRectangles[connectedFile].Left, fileRectangles[connectedFile].Top + fileRectangles[connectedFile].Height / 2);
-                                e.Graphics.DrawLine(pen, start, end);
-                            }
-                        }
-                    }
+                    // Calculate positions for lines
+                    Point start = new Point(x + 50, y + 15); // Center of the current file
+                    Rectangle connectedRect = fileRectangles[connectedFile];
+                    Point end = new Point(connectedRect.X + 50, connectedRect.Y + 15); // Center of the connected file
+                    e.Graphics.DrawLine(pen, start, end);
                 }
             }
+            index++;
+        }
+    }
+{
+    base.OnPaint(e);
+    if (fileConnections == null) return;
+
+    using (Pen pen = new Pen(Color.Black))
+    using (Font font = new Font(FontFamily.GenericSansSerif, 8))
+    {
+        int centerX = this.Width / 2;
+        int centerY = this.Height / 2;
+        int radius = 100; // Adjust radius as needed
+        int index = 0;
+
+        foreach (var file in fileConnections.Keys)
+        {
+            // Calculate position based on a spider web layout
+            double angle = (2 * Math.PI / fileConnections.Count) * index; // Calculate angle based on file index
+            int x = centerX + (int)(radius * Math.Cos(angle));
+            int y = centerY + (int)(radius * Math.Sin(angle));
+
+            Rectangle rect = new Rectangle(x, y, 100, 30); // Adjust size as needed
+            e.Graphics.DrawRectangle(pen, rect);
+            e.Graphics.DrawString(System.IO.Path.GetFileName(file), font, Brushes.Black, rect);
+
+            // Draw connections
+            foreach (var connectedFile in fileConnections[file])
+            {
+                if (fileRectangles.ContainsKey(connectedFile))
+                {
+                    // Calculate positions for lines
+                    Point start = new Point(x + 50, y + 15); // Center of the current file
+                    // Calculate the position of the connected file
+                    Rectangle connectedRect = fileRectangles[connectedFile];
+                    Point end = new Point(connectedRect.X + 50, connectedRect.Y + 15); // Center of the connected file
+                    e.Graphics.DrawLine(pen, start, end);
+                }
+            }
+            index++;
+        }
+    }
+}
         }
 
         private void FileVisualizer_MouseClick(object sender, MouseEventArgs e)

@@ -36,7 +36,7 @@ namespace DarkTorch.Forms
         private TextBox noteTextBox;
         private Button saveNoteButton;
         private Button openInEditorButton;
-        private Button selectFolderButton;
+        private Button selectFolderButton; // Declare the button here
 
         public MainForm()
         {
@@ -44,14 +44,6 @@ namespace DarkTorch.Forms
             projectAnalyzer = new ProjectAnalyzer();
             fileManager = new FileManager();
             this.KeyDown += MainForm_KeyDown; // Add key down event handler
-        }
-
-        private void MainForm_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Control && e.KeyCode == Keys.K) // Check for Ctrl + K
-            {
-                SelectFolderButton_Click(sender, e); // Trigger folder selection
-            }
         }
 
         private void InitializeComponent()
@@ -64,7 +56,8 @@ namespace DarkTorch.Forms
             {
                 Text = "Select Project Folder",
                 Location = new Point(10, 10), // Adjust the location as needed
-                Size = new Size(150, 30) // Adjust the size as needed
+                Size = new Size(200, 50), // Increased size for better visibility
+                BackColor = Color.LightBlue // Changed color for visibility
             };
             selectFolderButton.Click += SelectFolderButton_Click; // Attach the click event handler
 
@@ -115,8 +108,9 @@ namespace DarkTorch.Forms
             splitContainer.Panel2.Controls.Add(saveNoteButton);
             splitContainer.Panel2.Controls.Add(openInEditorButton);
 
-            this.Controls.Add(splitContainer);
+            // Add the select folder button to the top of the form
             this.Controls.Add(selectFolderButton);
+            this.Controls.Add(splitContainer);
         }
 
         private void SelectFolderButton_Click(object sender, EventArgs e)
@@ -173,6 +167,14 @@ namespace DarkTorch.Forms
                 {
                     MessageBox.Show("No text editor selected. Please run the setup again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.K) // Check for Ctrl + K
+            {
+                SelectFolderButton_Click(sender, e); // Trigger folder selection
             }
         }
     }
