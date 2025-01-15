@@ -6,6 +6,20 @@ namespace DarkTorch.Core
 {
     public class FileManager
     {
+        /*
+         * FileManager.cs
+         * 
+         * The FileManager class is responsible for managing file operations related to
+         * project notes and previews. It allows users to save, load, and retrieve notes
+         * associated with files, as well as preview file contents.
+         * 
+         * Features:
+         * - Get a preview of file contents
+         * - Save notes for individual files
+         * - Retrieve notes for individual files
+         * - Load all notes from a specified project directory
+         */
+
         private Dictionary<string, string> fileNotes;
 
         public FileManager()

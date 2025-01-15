@@ -10,6 +10,19 @@ namespace DarkTorch.UI
     [DataContract]
     public class FileVisualizer : Panel
     {
+        /*
+         * FileVisualizer.cs
+         * 
+         * The FileVisualizer class is responsible for visualizing file connections
+         * within a project. It provides a graphical interface to display files and
+         * their relationships, allowing users to select files and view their contents.
+         * 
+         * Features:
+         * - Visualize file connections in a project
+         * - Display file names in a graphical format
+         * - Handle user interactions for file selection
+         */
+
         private Dictionary<string, List<string>> fileConnections;
         private Dictionary<string, Rectangle> fileRectangles;
 

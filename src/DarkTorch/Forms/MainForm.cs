@@ -11,6 +11,23 @@ namespace DarkTorch.Forms
 {
     public class MainForm : Form
     {
+        /*
+         * MainForm.cs
+         * 
+         * This form serves as the main interface for the DarkTorch application.
+         * It allows users to visualize file connections, preview file contents,
+         * and manage notes for individual files.
+         * 
+         * Features:
+         * - Visualize file connections in a project
+         * - Preview file contents
+         * - Add and manage notes for individual files
+         * 
+         * Requirements:
+         * - .NET Framework 4.7.2 or later
+         * - Windows operating system
+         */
+
         private FileVisualizer fileVisualizer;
         private ProjectAnalyzer projectAnalyzer;
         private FileManager fileManager;
