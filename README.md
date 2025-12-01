@@ -1,5 +1,9 @@
 # DarkTorch: Code Visualization & Notes
 
+[![CI](https://github.com/DerJanniku/Dark-Torch/actions/workflows/ci.yml/badge.svg)](https://github.com/DerJanniku/Dark-Torch/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/DerJanniku/Dark-Torch)](https://github.com/DerJanniku/Dark-Torch/releases)
+
 DarkTorch is a powerful developer tool designed to bridge the gap between code structure and developer knowledge. It visualizes your Python project's dependency graph and allows you to attach persistent notes to specific files directly within the visualization.
 
 ## Key Features
